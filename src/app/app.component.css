@@ -1,0 +1,11 @@
+.evel-primary-container{
+    overflow-y: auto
+}
+
+.evel-page-container {
+    background: linear-gradient(#e8e161, #F46569, #bee5fb);
+}
+
+.evel-footer {
+    background-color: #bee5fb;
+}

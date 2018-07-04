@@ -1,0 +1,91 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// For use in src/lib/core/theming/_palette.scss
+$evel-primary-pallete: (
+    50 : #f7fcff,
+    100 : #ecf7fe,
+    200 : #dff2fd,
+    300 : #d2edfc,
+    400 : #c8e9fc,
+    500 : #bee5fb,
+    600 : #b8e2fa,
+    700 : #afdefa,
+    800 : #a7daf9,
+    900 : #99d3f8,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000
+    )
+);
+
+$evel-secondary-pallete: (
+    50 : #fcfbec,
+    100 : #f8f6d0,
+    200 : #f4f0b0,
+    300 : #efea90,
+    400 : #ebe679,
+    500 : #e8e161,
+    600 : #e5dd59,
+    700 : #e2d94f,
+    800 : #ded545,
+    900 : #d8cd33,
+    A100 : #ffffff,
+    A200 : #fffeeb,
+    A400 : #fffab8,
+    A700 : #fff89f,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$evel-app-primary: mat-palette($evel-primary-pallete);
+$evel-app-accent:  mat-palette($evel-secondary-pallete);
+
+// The warn palette is optional (defaults to red).
+$evel-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$evel-app-theme: mat-light-theme($evel-app-primary, $evel-app-accent, $evel-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($evel-app-theme);

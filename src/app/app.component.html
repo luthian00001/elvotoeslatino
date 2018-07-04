@@ -1,12 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxFlexFill fxLayout="column">
-  <mat-toolbar>
+  <mat-toolbar color="accent">
+    <a [routerLink]="['/']">
+      <h2>El Voto Es Latino</h2>
+    </a>
+    <span fxFlex></span>
+    
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button mat-button routerLink="/candidates">Candidates</button>
+      <button mat-button routerLink="/services">Services</button>
+  </div>
+
+  <mat-menu #siteNav="matMenu">
+    <button mat-button routerLink="/candidates">Candidates</button>
+    <button mat-button routerLink="/services">Services</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="siteNav" fxHide="false" fxHide.gt-sm>
+   <mat-icon>menu</mat-icon>
+  </button>
 
   </mat-toolbar>
-  <div fxFlex>
-  <router-outlet></router-outlet>
+  <div class="evel-primary-container" fxFlex fxLayout="column">
+    <div class="evel-page-container" fxFlex>
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="evel-footer">
+      <h2> footer content </h2>
+    </footer>
   </div>
-  <footer>
-    <h2> footer content </h2>
-  </footer>
 </div>
