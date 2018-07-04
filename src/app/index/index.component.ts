@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
+  candidateCount = 1178;
+  latinoVote = 27300000;
+  volunteerCount = 28;
+
   constructor() { }
 
   ngOnInit() {

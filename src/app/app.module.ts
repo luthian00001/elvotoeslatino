@@ -6,12 +6,16 @@ import { FlexLayoutModule } from "@angular/flex-layout"
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { routes } from "./app.routing"
-import { MaterialModule } from "./material/material.module"
+import { MaterialModule } from "./material/material.module";
+import { CandidatesComponent } from './candidates/candidates.component';
+import { ServicesComponent } from './services/services.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    CandidatesComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

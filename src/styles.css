@@ -9,3 +9,36 @@ html, body{
 .fill-remaining-space {
     flex: 1 1 auto;
 }
+
+.evel-primary-container{
+    overflow-y: auto
+}
+
+.evel-page-container {
+    /* background: linear-gradient(#e8e161, #F46569, #bee5fb); */
+}
+
+.evel-footer {
+    background-color: #bee5fb;
+}
+
+.evel-active-link {
+    text-decoration: underline;
+}
+
+.evel-primary-panel {
+    background-color: #bee5fb;
+    color: #F46569
+}
+
+.evel-secondary-panel {
+    background-color: #F46569;
+    color: #FDFFED
+}
+
+/* #385D70 */
+
+.evel-tertiary-panel {
+    background-color: #e8e161;
+    color: #385D70
+}

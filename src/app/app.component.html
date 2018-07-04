@@ -1,19 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxFlexFill fxLayout="column">
   <mat-toolbar color="accent">
-    <a [routerLink]="['/']">
+    <button mat-button routerLink="/">
       <h2>El Voto Es Latino</h2>
-    </a>
+    </button>
     <span fxFlex></span>
     
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button mat-button routerLink="/candidates">Candidates</button>
-      <button mat-button routerLink="/services">Services</button>
+      <button mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
+      <button mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
   </div>
 
   <mat-menu #siteNav="matMenu">
-    <button mat-button routerLink="/candidates">Candidates</button>
-    <button mat-button routerLink="/services">Services</button>
+    <button mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
+    <button mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
   </mat-menu>
 
   <button mat-button [matMenuTriggerFor]="siteNav" fxHide="false" fxHide.gt-sm>

@@ -7,7 +7,7 @@
 @include mat-core();
 
 // For use in src/lib/core/theming/_palette.scss
-$evel-primary-pallete: (
+$evel-secondary-pallete: (
     50 : #f7fcff,
     100 : #ecf7fe,
     200 : #dff2fd,
@@ -39,8 +39,7 @@ $evel-primary-pallete: (
         A700 : #000000
     )
 );
-
-$evel-secondary-pallete: (
+$evel-primary-pallete: (
     50 : #fcfbec,
     100 : #f8f6d0,
     200 : #f4f0b0,
