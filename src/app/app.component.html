@@ -2,18 +2,18 @@
 <div fxFlexFill fxLayout="column">
   <mat-toolbar color="accent">
     <button mat-button routerLink="/">
-      <h2>El Voto Es Latino</h2>
+      <h2 class="uppercase evel-primary-text">El Voto Es Latino</h2>
     </button>
     <span fxFlex></span>
     
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
-      <button mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
+      <button class="evel-primary-text" mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
+      <button class="evel-primary-text" mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
   </div>
 
   <mat-menu #siteNav="matMenu">
-    <button mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
-    <button mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
+    <button class="evel-primary-text" mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
+    <button class="evel-primary-text" mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
   </mat-menu>
 
   <button mat-button [matMenuTriggerFor]="siteNav" fxHide="false" fxHide.gt-sm>

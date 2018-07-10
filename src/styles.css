@@ -42,3 +42,11 @@ html, body{
     background-color: #e8e161;
     color: #385D70
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.evel-primary-text {
+    color: #F46569 !important;
+}
