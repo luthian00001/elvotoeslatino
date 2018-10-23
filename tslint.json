@@ -82,6 +82,7 @@
       "check-else",
       "check-whitespace"
     ],
+    "ordered-imports": true,
     "prefer-const": true,
     "quotemark": [
       true,
@@ -112,6 +113,7 @@
       true,
       "check-branch",
       "check-decl",
+      "check-module",
       "check-operator",
       "check-separator",
       "check-type"

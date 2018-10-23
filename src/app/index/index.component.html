@@ -1,26 +1,26 @@
-<div class="evel-primary-panel" fxLayout="column">
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <h1 class="mat-display-4">
+<div class="" fxLayout="column">
+  <div class="evel-primary-panel" fxLayout="row" fxLayoutAlign="center center" style="min-height: 500px;">
+  <h1 class="mat-display-4 uppercase">
         tu voto es tu voz
     </h1>
   </div>
   <div class="evel-info-container" fxLayout="row" fxLayoutAlign="center center">
     
-    <div class="evel-info-panel" fxLayout="column" fxLayoutAlign="start center" fxFlex>
-      <h2>{{candidateCount}}</h2>
-      <span>Candidates for 2018</span>
+    <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+      <h2>{{candidateCount | numberSummary}}</h2>
+      <h3>Candidates for 2018</h3>
     </div>
 
-    <div class="evel-info-panel" fxLayout="column" fxLayoutAlign="start center" fxFlex>
-      <h2>{{latinoVote}}</h2>
-      <span>Latinos eligible to cast votes</span>
+    <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+      <h2>
+        {{latinoVote | numberSummary}}
+      </h2>
+      <h3>Latinos eligible to cast votes</h3>
     </div>
 
-    <div class="evel-info-panel"  fxLayout="column" fxLayoutAlign="start center" fxFlex>
-      <div>
-        <h2>{{volunteerCount}}</h2><br/>
-        <span>volunteers</span>
-      </div>
+    <div class="evel-info-panel uppercase"  fxLayout="column" fxLayoutAlign="start center" fxFlex>
+        <h2>{{volunteerCount | numberSummary}}</h2><br/>
+        <h3>volunteers</h3>
     </div>
   
   </div>
