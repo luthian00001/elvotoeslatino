@@ -1,29 +1,30 @@
 <div class="" fxLayout="column">
-  <div class="evel-primary-panel" fxLayout="row" fxLayoutAlign="center center" style="min-height: 500px;">
-  <h1 class="mat-display-4 uppercase">
-        tu voto es tu voz
-    </h1>
-  </div>
-  <div class="evel-info-container" fxLayout="row" fxLayoutAlign="center center">
-    
-    <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
-      <h2>{{candidateCount | numberSummary}}</h2>
-      <h3>Candidates for 2018</h3>
+  <div class="evel-primary-panel" fxLayout="column" style="min-height: 97vh;">
+    <div fxFlex="50" fxLayout="row" fxLayoutAlign="center center">
+      <h1 class="mat-display-4 uppercase">
+          tu voto es tu voz
+      </h1>
     </div>
+    <div class="evel-info-container" fxFlex="50" fxHide.lt-md fxLayout="row" fxLayoutAlign="center center">
 
-    <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
-      <h2>
-        {{latinoVote | numberSummary}}
-      </h2>
-      <h3>Latinos eligible to cast votes</h3>
-    </div>
+      <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+        <h2 class="mat-title">{{candidateCount | numberSummary}}</h2>
+        <h3 class="mat-subheading-2">Candidates for 2018</h3>
+      </div>
 
-    <div class="evel-info-panel uppercase"  fxLayout="column" fxLayoutAlign="start center" fxFlex>
-        <h2>{{volunteerCount | numberSummary}}</h2><br/>
-        <h3>volunteers</h3>
+      <div class="evel-info-panel uppercase" fxLayout="column" fxLayoutAlign="start center" fxFlex>
+        <h2 class="mat-title">{{latinoVote | numberSummary}}</h2>
+        <h3 class="mat-subheading-2">Latinos eligible to cast votes</h3>
+      </div>
+
+      <div class="evel-info-panel uppercase"  fxLayout="column" fxLayoutAlign="start center" fxFlex>
+        <h2 class="mat-title">{{volunteerCount | numberSummary}}</h2><br/>
+        <h3 class="mat-subheading-2">volunteers</h3>
+      </div>
+
     </div>
-  
   </div>
+
 
   <div class="evel-secondary-panel">
     <h2>The Latino Voter</h2>

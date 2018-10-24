@@ -1,24 +1,37 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxFlexFill fxLayout="column">
-  <mat-toolbar color="accent">
-    <button mat-button routerLink="/">
-      <h2 class="uppercase evel-primary-text ">El Voto Es Latino</h2>
+  <mat-toolbar color="accent" fxLayout="row" >
+
+    <button fxHide.gt-xs="true" mat-icon-button [matMenuTriggerFor]="mobileMenu">
+      <mat-icon>menu</mat-icon>
     </button>
-    <span fxFlex></span>
-    
-    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button class="evel-primary-text" mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
-      <button class="evel-primary-text" mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
-  </div>
 
-  <mat-menu #siteNav="matMenu">
-    <button class="evel-primary-text" mat-button routerLink="/candidates" routerLinkActive="evel-active-link">Candidates</button>
-    <button class="evel-primary-text" mat-button routerLink="/services" routerLinkActive="evel-active-link">Services</button>
-  </mat-menu>
+    <div fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button [matMenuTriggerFor]="evelMenu">El Voto Es Latino</button>
+    </div>
+    <div fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button [matMenuTriggerFor]="evelEducadosMenu">El Voto Es Latino Educados</button>
+    </div>
 
-  <button mat-button [matMenuTriggerFor]="siteNav" fxHide="false" fxHide.gt-sm>
-   <mat-icon>menu</mat-icon>
-  </button>
+    <mat-menu #evelEducadosMenu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item>About</button>
+      <button mat-menu-item>Nationwide Voter Info</button>
+      <button mat-menu-item>Texas Voter Info</button>
+      <button mat-menu-item>Donate</button>
+    </mat-menu>
+
+    <mat-menu #evelMenu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item>Services</button>
+      <button mat-menu-item>About</button>
+      <button mat-menu-item>Store</button>
+      <button mat-menu-item>Endorsements</button>
+      <button mat-menu-item>Candidates</button>
+    </mat-menu>
+
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="evelMenu">El Voto Es Latino</button>
+      <button mat-menu-item [matMenuTriggerFor]="evelEducadosMenu">El Voto Es Latino Educados</button>
+    </mat-menu>
 
   </mat-toolbar>
   <div class="evel-primary-container" fxFlex fxLayout="column">
