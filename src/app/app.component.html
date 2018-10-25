@@ -13,6 +13,15 @@
       <button mat-button [matMenuTriggerFor]="evelEducadosMenu">El Voto Es Latino Educados</button>
     </div>
 
+    <div fxFlex></div>
+    <div class="evel-social" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <a href="https://www.instagram.com/elvotoeslatino/" target="_blank"><img src="../assets/glyph-logo_May2016.png" alt="Instagram" height="30px" width="30px" /></a>
+      <a href="https://www.facebook.com/elvotoeslatino/" target="_blank"><img src="../assets/flogo_RGB_HEX-72.png" alt="Facebook" height="30px" width="30px" /></a>
+      <a href="https://twitter.com/ElVotoEsLatino/" target="_blank"><img src="../assets/Twitter_Logo_WhiteOnBlue.png" alt="Twitter" height="30px" width="30px" /></a>
+      <mat-divider [vertical]="true"></mat-divider>
+      <a><mat-icon style="font-size: 35px;">email</mat-icon></a>
+    </div>
+
     <mat-menu #evelEducadosMenu="matMenu" [overlapTrigger]="false">
       <button mat-menu-item>About</button>
       <button mat-menu-item>Nationwide Voter Info</button>
