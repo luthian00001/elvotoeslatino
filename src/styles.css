@@ -1,9 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*
+#F46569 - Red
+#E8E161 - Yellow
+#BEE5FB - Blue
+*/
 html, body{
     height: 100vh;
     min-height: 100vh;
     margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.primary-image {
+  min-height: 500px; background: url('assets/36085108_189015118461159_505552586003185664_n.jpg') no-repeat fixed center;
+  background-size: cover;
 }
 
 .fill-remaining-space {
@@ -24,13 +42,6 @@ html, body{
 
 .evel-active-link {
     text-decoration: underline;
-}
-
-
-
-.evel-secondary-panel {
-    background-color: #F46569;
-    color: #FDFFED
 }
 
 /* #385D70 */

@@ -1,9 +1,11 @@
-h1 {
-    font-size: 70px;
+h1.index-title {
+  font-size: 70px;
+  line-height: 70px;
 }
 
-h2 { 
-    font-size: 50px;
+h2.index-title {
+  font-size: 50px;
+  line-height: 50px;
 }
 
 .evel-info-container {
@@ -13,6 +15,22 @@ h2 {
 .evel-info-panel {
     /* text-align: center;
     border-bottom: 3px solid #F46569; */
+}
+
+.yellow-to-blue {
+  background-image: linear-gradient(#e8e161, #BEE5FB);
+}
+
+.red-to-yellow {
+  background-image: linear-gradient(#F46569, #E8E161);
+}
+
+.red-to-blue {
+  background-image: linear-gradient(#F46569, #BEE5FB);
+}
+
+.evel-secondary-panel {
+
 }
 
 .evel-primary-panel {
