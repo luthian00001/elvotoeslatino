@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div fxFlexFill fxLayout="column">
+<div fxFlexFill fxLayout="column" class="mat-typography">
   <mat-toolbar color="accent" fxLayout="row" >
 
     <button fxHide.gt-xs="true" mat-icon-button [matMenuTriggerFor]="mobileMenu">
@@ -44,11 +44,15 @@
 
   </mat-toolbar>
   <div class="evel-primary-container" fxFlex fxLayout="column">
-    <div class="evel-page-container" fxFlex>
+    <div class="evel-page-container">
       <router-outlet></router-outlet>
     </div>
-    <footer class="evel-footer">
-      <h2> footer content </h2>
+    <footer class="evel-footer" fxLayout="row" fxLayoutAlign="start end" style="min-height: 50px;">
+      <address class="uppercase bold" style="text-align: left;" fxFlex>
+        po box 8345 fort worth, tx 76124
+      </address>
+      <a href="mailto:info@elvotoeslatino.com" fxFlex style="text-align: center;">info&#64;elvotoeslatino.com</a>
+      <small class="uppercase" fxFlex style="text-align: right;">&copy; Copyright {{copyrightYear}}, El Voto Es Latino</small>
     </footer>
   </div>
 </div>
