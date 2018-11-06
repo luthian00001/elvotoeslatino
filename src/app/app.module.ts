@@ -9,6 +9,7 @@ import { IndexComponent } from './index/index.component';
 import { MaterialModule } from './material/material.module';
 import { NumberSummaryPipe } from './number-summary.pipe';
 import { ServicesComponent } from './services/services.component';
+import { AboutEducadosComponent } from './about-educados/about-educados.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ServicesComponent } from './services/services.component';
     IndexComponent,
     CandidatesComponent,
     ServicesComponent,
-    NumberSummaryPipe
+    NumberSummaryPipe,
+    AboutEducadosComponent
   ],
   imports: [
     BrowserModule,

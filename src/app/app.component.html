@@ -7,10 +7,10 @@
     </button>
 
     <div fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
-      <button mat-button [matMenuTriggerFor]="evelMenu">El Voto Es Latino</button>
-    </div>
-    <div fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
-      <button mat-button [matMenuTriggerFor]="evelEducadosMenu">El Voto Es Latino Educados</button>
+      <button *ngIf="activeSite == sites.elVoto" mat-raised-button [matMenuTriggerFor]="evelMenu" color="primary">El Voto Es Latino</button>
+      <button *ngIf="activeSite != sites.elVoto" mat-button [matMenuTriggerFor]="evelMenu">El Voto Es Latino</button>
+      <button *ngIf="activeSite == sites.educados" mat-raised-button [matMenuTriggerFor]="evelEducadosMenu" color="primary">El Voto Es Latino Educados</button>
+      <button *ngIf="activeSite != sites.educados" mat-button [matMenuTriggerFor]="evelEducadosMenu">El Voto Es Latino Educados</button>
     </div>
 
     <div fxFlex></div>
@@ -23,14 +23,14 @@
     </div>
 
     <mat-menu #evelEducadosMenu="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item>About</button>
+      <a mat-menu-item routerLink="/educados/about">About</a>
       <button mat-menu-item>Nationwide Voter Info</button>
       <button mat-menu-item>Texas Voter Info</button>
       <button mat-menu-item>Donate</button>
     </mat-menu>
 
     <mat-menu #evelMenu="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item>Services</button>
+      <a mat-menu-item routerLink="/elvotoeslatino/services">Services</a>
       <button mat-menu-item>About</button>
       <button mat-menu-item>Store</button>
       <button mat-menu-item>Endorsements</button>
@@ -44,7 +44,7 @@
 
   </mat-toolbar>
   <div class="evel-primary-container" fxFlex fxLayout="column">
-    <div class="evel-page-container">
+    <div class="evel-page-container" fxFlex fxLayout="column">
       <router-outlet></router-outlet>
     </div>
     <footer class="evel-footer" fxLayout="row" fxLayoutAlign="start end" style="min-height: 50px;">
