@@ -1,3 +1,10 @@
+
+:host{
+  flex:1;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
 h1.index-title {
   font-size: 70px;
   line-height: 70px;

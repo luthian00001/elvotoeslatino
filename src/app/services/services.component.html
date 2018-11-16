@@ -1,41 +1,17 @@
-<h1 style="text-align: center;">Services</h1>
-<div fxLayout="row wrap" fxLayoutAlign="stretch" fxLayoutGap="10px" style="">
-
-    <mat-card fxFlex="calc(50%-10px)">
+<div fxFlex fxLayoutGap="20px" fxLayout="column" fxLayoutAlign="start stretch" style="overflow:auto; padding: 5px;">
+  <mat-card *ngFor="let service of services" fxFlex>
+    <mat-card-header>
+      <mat-icon mat-card-avatar="" *ngIf="service.icon">{{service.icon}}</mat-icon>
       <mat-card-title>
-        Phone Banking
+        {{service.title}}
       </mat-card-title>
-      <mat-card-content>
-        Our experienced volunteers will phone bank for our endorsed candidates at least three times during the course of a campaign.
-      </mat-card-content>
-    </mat-card>
+    </mat-card-header>
 
-
-
-  <mat-card fxFlex="calc(50%-10px)">
-    <mat-card-title>
-      Block Walking
-    </mat-card-title>
-    <mat-card-content>
-      We will set up targeted block-walks for our endorsed candidates (location permitting)
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card fxFlex="calc(50%-10px)">
-    <mat-card-title>
-      Data Entry
-    </mat-card-title>
-    <mat-card-content>
-      Data collection is imperative to a successful campaign, volunteers will enter data for at least eight collective hours for our endorsed candidates.
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card fxFlex="calc(50%-10px)">
-    <mat-card-title>
-      Social Media Marketing
-    </mat-card-title>
-    <mat-card-content>
-      Any activity done on behalf of an endorsed candidate will be put on multiple social media platforms utilizing the hashtag of that particular campaign.
+    <mat-card-content fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" >
+      <div fxFlex.lt-md="" fxFlex="20" *ngIf="service.image">
+        <img mat-card-image [attr.src]="service.image" [attr.alt]="service.imageAlt">
+      </div>
+      <p>{{service.description}}</p>
     </mat-card-content>
   </mat-card>
 </div>

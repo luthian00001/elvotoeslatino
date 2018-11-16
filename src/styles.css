@@ -5,10 +5,23 @@
 #E8E161 - Yellow
 #BEE5FB - Blue
 */
-html, body{
-    height: 100vh;
-    min-height: 100vh;
-    margin: 0;
+html {
+  height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100vh;
+}
+
+app-root {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .bold {
@@ -29,7 +42,6 @@ html, body{
 }
 
 .evel-primary-container{
-    overflow-y: auto
 }
 
 .evel-page-container {
